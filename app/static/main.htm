@@ -1,0 +1,22 @@
+<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp mdl-color--white">
+    <thead>
+        <tr>
+            <th class="mdl-data-table__cell--non-numeric">Nombre</th>
+            <th>RFID</th>
+            <th>Status</th>
+            <th>Ver logs</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="user in users">
+            <td class="mdl-data-table__cell--non-numeric">{{user.nombre}}</td>
+            <td>{{user.rfid}}</td>
+            <td>{{user.status}}</td>
+            <td>
+                <a class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored" ng-href="usuario/{{user.id}}">
+                  <i class="material-icons">add</i>
+                </a>
+            </td>
+        </tr>
+    </tbody>
+</table>
